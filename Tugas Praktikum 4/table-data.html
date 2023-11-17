@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <header>
+                <h1>PANEL ADMIN</h1>
+            </header>
+            <nav>
+                <ul>
+                  <li><a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a></li>
+                  <li class="active-nav"><a href="table-data.html"><i class="fa  fa-bar-chart"></i>Table Data</a></li>
+                  <li><a href="user-profile.html"><i class="fa fa-fw fa-user"></i>User Profile</a></li>
+                  <li><a href="more.html"><i class="fa fa-fw fa-ellipsis-h"></i>More</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+          <div class="navbar">
+            <ul>
+              <li><a href="#"><i class="fa fa-fw fa-search"></i>Search</a></li>
+              <div class="centered-navbar">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="table-data.html">Table Data</a></li>
+                <li><a href="user-profile.html">Profile</a></li>
+                <li><a href="more.html">More</a></li>
+              </div>
+              <li style="float:right"><a href="#about">[Log out]</a></li>
+              <li style="float:right"><a href="#about">Welcome Rara</a></li>
+            </ul>
+          </div>
+          <ul class="breadcrumb">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="table-data.html">Table Data</a></li>
+            <li>Table</li>
+          </ul>
+            <section class="widget">
+              <div class="table-data-container">
+                <div class="table-container" style="float: left;">
+                    <table>
+                        <tr>
+                            <th style="line-height: 30px;" colspan="5" id="table-title"><span style="font-size: 20px; color: rgb(31, 31, 31);">Tabel data mahasiswa</span>
+                            <br><span style="color: #ddd; font-weight: 100;">Penerimaan mahasiswa baru angkatan 2023</span>
+                            </th>
+                        </tr>
+                        <tr>
+                          <th>NIM</th>
+                          <th>NAMA</th>
+                          <th>STATUS</th>
+                          <th>ALAMAT</th>
+                          <th>UMUR</th>
+                        </tr>
+                        <tr>
+                          <td>60900121017</td>
+                          <td>Raizsa Zahra</td>
+                          <td>Married</td>
+                          <td>Hertasning</td>
+                          <td>21</td>
+                        </tr>
+                        <tr>
+                          <td>60900121018</td>
+                          <td>Yunita Amalia</td>
+                          <td>Single</td>
+                          <td>Samata</td>
+                          <td>20</td>
+                        </tr>
+                        <tr>
+                          <td>60900121013</td>
+                          <td>Siti Aisyah</td>
+                          <td>Married</td>
+                          <td>Parangbanoa</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>60900121001</td>
+                            <td>Nadya Febrianti</td>
+                            <td>Married</td>
+                            <td>Balang-balang</td>
+                            <td>23</td>
+                          </tr>
+                          <tr>
+                            <td>60900121012</td>
+                            <td>Maharani Shania</td>
+                            <td>Single</td>
+                            <td>Pao-pao</td>
+                            <td>20</td>
+                          </tr>
+                          <tr>
+                            <td>60900121062</td>
+                            <td>Firman Reski</td>
+                            <td>Married</td>
+                            <td>Syekh Yusuf</td>
+                            <td>21</td>
+                          </tr>
+                      </table>
+                </div>
+                <div class="right-chart">
+                  <div id="myChart" style="width:90%; max-width:300px; height:300px; float: right;">
+                  </div>
+                  
+                  <script>
+                  google.charts.load('current', {'packages':['corechart']});
+                  google.charts.setOnLoadCallback(drawChart);
+                  
+                  function drawChart() {
+                  
+                  // Set Data
+                  const data = google.visualization.arrayToDataTable([
+                    ['Contry', 'Mhl'],
+                    ['SNMPTN',54.8],
+                    ['Beasiswa',48.6],
+                    ['Ordal',44.4],
+                    ['SBMPTN',64.4],
+
+                  ]);
+                  
+                  // Set Options
+                  const options = {
+                    title:'Daftar penerimaan mahasiswa baru'
+                  };
+                  
+                  // Draw
+                  const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                  chart.draw(data, options);
+                  
+                  }
+                  </script>
+                </div>
+                <div class="clear"></div>
+              </div>
+                
+                <br>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                  </div>
+
+                
+          </section>
+              
+        </main>
+      </div>
+</body>
+</html>
